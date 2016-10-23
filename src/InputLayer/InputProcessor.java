@@ -3,6 +3,8 @@ package InputLayer;
 import java.util.ArrayList;
 
 import Dictionary.Constants;
+import ProcessingLayer.ListIntersection;
+import ProcessingLayer.Trie;
 
 public class InputProcessor {
 	
@@ -26,10 +28,8 @@ public class InputProcessor {
 		for(int i = 0; i < temporaryTokens.length; i++){
 			
 			if(checkWord(temporaryTokens[i])&& !isIrrelevantToken(temporaryTokens[i])){
-				
 				//change to lower case and add
 				inputTokens.add(temporaryTokens[i].toLowerCase());
-				
 			}
 	
 		}
@@ -61,4 +61,23 @@ public class InputProcessor {
 		return true;
 	}
 
+	public int getIndexOfAnswer(Trie trie){
+		
+		ArrayList<ArrayList<Integer> > finalList = makeList(trie);
+		int index = ListIntersection.intersect(finalList);
+		return index;
+	}
+	
+	private ArrayList<ArrayList<Integer> > makeList(Trie trie){
+		ArrayList<ArrayList<Integer> > finalList = new ArrayList<ArrayList<Integer>>();
+		for(int i = 0; i < inputTokens.size(); i++){
+			ArrayList<Integer> temp = trie.getList(inputTokens.get(i));
+			if(temp == null){
+				continue;
+			}
+			finalList.add(temp);
+		}
+		return finalList;
+	}
+	
 }

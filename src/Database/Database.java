@@ -50,7 +50,9 @@ public class Database {
 	}
 	public String getAnswer(int index){
 		String answer=null;
-		
+		if(index == -1){
+			return "Sorry i dont understand";
+		}
 		try{
 			statement.executeQuery("Select answer from answers where id=" + index);
 			while(rs.next())

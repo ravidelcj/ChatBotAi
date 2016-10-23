@@ -71,7 +71,7 @@ public class ChatBot {
 			System.out.println(botResponse);
 			System.out.println("");
 			
-			botResponse = "Sorry!! Please be more Clear ";
+			//botResponse = "Sorry!! Please be more Clear ";
 			
 			//User Response
 			System.out.print("> ");
@@ -85,6 +85,11 @@ public class ChatBot {
 			}
 			processInput = new InputProcessor(userResponse);
 			processInput.splitStringToTokens();
+			int index = processInput.getIndexOfAnswer(chatbot.trie);
+			
+			botResponse=chatbot.answerDatabase.getAnswer(index);
+			
+			
 			System.out.println("");
 		}
 		chatbot.serializeTrie();

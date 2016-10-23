@@ -70,4 +70,23 @@ public class Trie implements Serializable{
 		return false;
 	}
 	
+	
+	//get Array list corresponding to word
+	public ArrayList<Integer> getList(String word){
+		
+		TrieNode current = root;
+		
+		for(char ch : word.toCharArray()){
+			
+			if(current.subNode(ch)==null){
+				return null;
+			}else{
+				current = current.subNode(ch);
+			}	
+		}
+		if(current.isEnd == true){
+			return current.indexList;
+		}	
+		return null;
+	}
 }
