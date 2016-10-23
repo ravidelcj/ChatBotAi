@@ -10,6 +10,8 @@ public class Trie implements Serializable{
 		root = new TrieNode(' ');
 	}
 	
+	
+	/*TODO : ADD THE INDEX TO THE ARRAYLIST OF THE LEAF NODE*/
 	public void insert(String word){
 		TrieNode current = root;
 		

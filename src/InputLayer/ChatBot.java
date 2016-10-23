@@ -12,51 +12,52 @@ import ProcessingLayer.Trie;
 	
 public class ChatBot {
 
+	//function to Train the Bot
+	public Trie trie;
+	
+	public void trainBot(){
+		
+		Scanner scan = new Scanner(System.in);
+		String ans;
+		int noOfKeywords;
+		String keyword;
+		String trainEnd = "stop training";
+		while(true){
+			
+			ans = scan.nextLine();
+			
+			//checking termination command
+			if(ans.equals(trainEnd)){
+				break;
+			}
+			noOfKeywords = Integer.parseInt(scan.nextLine());
+			/*TODO : add this ans to database and get the index*/
+			while(noOfKeywords-->0){
+				keyword = scan.nextLine();
+				/*TODO : send index no of database*/
+				trie.insert(keyword);
+			}			
+		}
+		
+	}
+	
+	
 	public static void main(String arg[]){
 		
 		//Initialising constants
 		Constants constants = new Constants();
-		Trie trie = new Trie();
-		trie.insert("ravi");
-		trie.insert("himanshu");
-		trie.insert("karan");
-		try{
-			FileOutputStream fout = new FileOutputStream("./trie.ser");
-			ObjectOutputStream out = new ObjectOutputStream(fout);
-			out.writeObject(trie);
-			out.close();
-			fout.close();
-			System.out.println("Serialized");
-		}catch(Exception e){
-			System.out.println("Exception while Serialization\n"+e);
-		}
+		ChatBot chatbot = new ChatBot();
+		chatbot.deserializeTrie();
 		
-		Trie t = null;
-		try{
-			FileInputStream fin = new FileInputStream("./trie.ser");
-			ObjectInputStream in = new ObjectInputStream(fin);
-			
-			t = (Trie) in.readObject();
-			in.close();
-			fin.close();
-			System.out.println("Deserialization complete");
-		}catch(Exception e){
-			System.out.println("Exception in Deserialization\n"+e);
-		}
-		
-		if(t!=null){
-			
-			if(t.search("asdasdas")){
-				System.out.println("Found");
-			}else{
-				System.out.println("fuck");
-			}
-			
+		//if trie is not initialised
+		if(chatbot.trie == null){
+			chatbot.trie = new Trie();
 		}
 		
 		Scanner scan = new Scanner(System.in);
 		String botResponse, userResponse;
 		InputProcessor processInput;
+		
 		botResponse="Hi There i am Chat Bot.\n Please feel free to ask me any query :)";
 		while(true){			
 			
@@ -70,11 +71,43 @@ public class ChatBot {
 			//User Response
 			System.out.print("> ");
 			userResponse = scan.nextLine();
+			userResponse.trim();
+			if(userResponse.equals("TrainBot")){
+				chatbot.trainBot();
+			}else if(userResponse.equals("end")){
+				break;
+			}
 			processInput = new InputProcessor(userResponse);
 			processInput.splitStringToTokens();
 			System.out.println("");
 		}
+		chatbot.serializeTrie();
 		
+		
+	}
+	
+	public void serializeTrie(){
+		try{
+			FileOutputStream fout = new FileOutputStream("./trie.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fout);
+			out.writeObject(trie);
+			out.close();
+			fout.close();
+		}catch(Exception e){
+			System.out.println("Exception in serialization \n"+e);
+		}
+	}
+	
+	public void deserializeTrie(){
+		try{
+			FileInputStream fin = new FileInputStream("./trie.ser");
+			ObjectInputStream in = new ObjectInputStream(fin);
+			trie = (Trie)in.readObject();
+			in.close();
+			fin.close();
+		}catch(Exception e){
+			System.out.println("Exception in deserialization \n"+e);
+		}
 	}
 	
 }
