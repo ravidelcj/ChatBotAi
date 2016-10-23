@@ -1,6 +1,7 @@
 package ProcessingLayer;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Trie implements Serializable{
 
@@ -12,10 +13,10 @@ public class Trie implements Serializable{
 	
 	
 	/*TODO : ADD THE INDEX TO THE ARRAYLIST OF THE LEAF NODE*/
-	public void insert(String word){
+	public void insert(String word, int index){
 		TrieNode current = root;
 		
-		if(search(word)==true){
+		if(search(word, index)==true){
 			return;
 		}else{
 			
@@ -34,10 +35,17 @@ public class Trie implements Serializable{
 			
 		}
 		current.isEnd = true;
+		if(current.indexList == null){
+			current.indexList = new ArrayList<>();
+		}
+		current.indexList.add(index);
 	}
 	
 	//Search whether the word exists in the trie or not
 	public boolean search(String word){
+		return search(word,-1);
+	}
+	public boolean search(String word,int index){
 		TrieNode current = root;
 		
 		for(char ch : word.toCharArray()){
@@ -51,6 +59,12 @@ public class Trie implements Serializable{
 		}
 		
 		if(current.isEnd == true){
+			if(index != -1){
+				if(current.indexList==null){
+					current.indexList = new ArrayList<Integer>();
+				}
+				current.indexList.add(index);
+			}
 			return true;
 		}
 		return false;

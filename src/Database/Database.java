@@ -1,15 +1,24 @@
 package Database;
 
 import java.sql.*;
+
 public class Database {
     Connection con = null;
     Statement statement = null;
     ResultSet rs = null;
     int index;
+    
+    public Database(){
+    	
+    	init();
+    	
+    }
+    
+    //
 	public void init(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection(" jdbc:mysql://localhost:3306/bot","root","root");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","admin");
 			statement = con.createStatement();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -20,9 +29,11 @@ public class Database {
 	
 	public int addAnswer(String answer){
 		try {
-			statement.executeQuery("Insert into answers(answer) values('" + answer + "')");
+			statement.executeUpdate("Insert into answers(answer) values('" + answer + "')");
 			rs = statement.executeQuery("Select COUNT(*) from answers");
-			index = rs.getInt(1);
+			while(rs.next()){
+			 index = rs.getInt(1);
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Exception in add answer: " + e);

@@ -7,6 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
+import Database.Database;
 import Dictionary.Constants;
 import ProcessingLayer.Trie;
 	
@@ -14,6 +15,11 @@ public class ChatBot {
 
 	//function to Train the Bot
 	public Trie trie;
+	public Database answerDatabase;
+	
+	public ChatBot(){
+		answerDatabase = new Database();
+	}
 	
 	public void trainBot(){
 		
@@ -22,8 +28,7 @@ public class ChatBot {
 		int noOfKeywords;
 		String keyword;
 		String trainEnd = "stop training";
-		while(true){
-			
+		while(true){			
 			ans = scan.nextLine();
 			
 			//checking termination command
@@ -31,11 +36,11 @@ public class ChatBot {
 				break;
 			}
 			noOfKeywords = Integer.parseInt(scan.nextLine());
-			/*TODO : add this ans to database and get the index*/
-			while(noOfKeywords-->0){
+			
+			int index = answerDatabase.addAnswer(ans);
+			while(noOfKeywords-- > 0){
 				keyword = scan.nextLine();
-				/*TODO : send index no of database*/
-				trie.insert(keyword);
+				trie.insert(keyword, index);
 			}			
 		}
 		
@@ -73,6 +78,7 @@ public class ChatBot {
 			userResponse = scan.nextLine();
 			userResponse.trim();
 			if(userResponse.equals("TrainBot")){
+				System.out.println("> Bot is in training mode \n");
 				chatbot.trainBot();
 			}else if(userResponse.equals("end")){
 				break;
@@ -88,7 +94,7 @@ public class ChatBot {
 	
 	public void serializeTrie(){
 		try{
-			FileOutputStream fout = new FileOutputStream("./trie.ser");
+			FileOutputStream fout = new FileOutputStream("/trie.ser");
 			ObjectOutputStream out = new ObjectOutputStream(fout);
 			out.writeObject(trie);
 			out.close();
@@ -100,7 +106,7 @@ public class ChatBot {
 	
 	public void deserializeTrie(){
 		try{
-			FileInputStream fin = new FileInputStream("./trie.ser");
+			FileInputStream fin = new FileInputStream("/trie.ser");
 			ObjectInputStream in = new ObjectInputStream(fin);
 			trie = (Trie)in.readObject();
 			in.close();
