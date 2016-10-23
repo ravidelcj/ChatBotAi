@@ -48,4 +48,19 @@ public class Database {
 			System.out.println("Exception in update answer: " + e);
 		}
 	}
+	public String getAnswer(int index){
+		String answer=null;
+		
+		try{
+			statement.executeQuery("Select answer from answers where id=" + index);
+			while(rs.next())
+			{
+				answer=rs.getString(1);
+				
+			}
+		}catch(Exception e){
+			System.out.println("Exception in getAnswer: " + e);
+		}
+		return answer;	
+	}
 }
