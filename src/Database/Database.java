@@ -13,12 +13,11 @@ public class Database {
     	init();
     	
     }
-    
-    //
+
 	public void init(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","123456789");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","admin");
 			statement = con.createStatement();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -54,7 +53,7 @@ public class Database {
 			return "Sorry i dont understand";
 		}
 		try{
-			statement.executeQuery("Select answer from answers where id=" + index);
+			rs = statement.executeQuery("Select answer from answers where id=" + index);
 			while(rs.next())
 			{
 				answer=rs.getString(1);

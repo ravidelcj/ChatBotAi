@@ -80,15 +80,21 @@ public class ChatBot {
 			if(userResponse.equals("TrainBot")){
 				System.out.println("> Bot is in training mode \n");
 				chatbot.trainBot();
+				continue;
 			}else if(userResponse.equals("end")){
 				break;
 			}
 			processInput = new InputProcessor(userResponse);
 			processInput.splitStringToTokens();
-			int index = processInput.getIndexOfAnswer(chatbot.trie);
 			
+			try{
+
+				int index = processInput.getIndexOfAnswer(chatbot.trie);
+				
 			botResponse=chatbot.answerDatabase.getAnswer(index);
-			
+			}catch(Exception e){
+				botResponse = "Sorry i could not understand";
+			}
 			
 			System.out.println("");
 		}
