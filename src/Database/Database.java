@@ -18,7 +18,7 @@ public class Database {
 	public void init(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","admin");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","123456789");
 			statement = con.createStatement();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
