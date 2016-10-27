@@ -17,7 +17,7 @@ public class Database {
 	public void init(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","admin");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","root");
 			statement = con.createStatement();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -47,6 +47,7 @@ public class Database {
 			System.out.println("Exception in update answer: " + e);
 		}
 	}
+	
 	public String getAnswer(int index){
 		String answer=null;
 		if(index == -1){
@@ -63,5 +64,14 @@ public class Database {
 			System.out.println("Exception in getAnswer: " + e);
 		}
 		return answer;	
+	}
+	
+	public void truncateTable(){
+		try {
+			statement.executeUpdate("Truncate answers");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Exception in truncateTable : " + e);
+		}
 	}
 }

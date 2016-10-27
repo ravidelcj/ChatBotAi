@@ -1,0 +1,46 @@
+Narendra Modi is prime minister of india
+who
+narendra
+modi
+prime 
+minister
+india
+/
+Himanshu is bandass
+who
+himanshu
+/
+Tajmahal is in agra
+where
+tajmahal
+taj
+mahal
+location
+located
+/
+red fort is in delhi
+where
+red 
+fort
+location
+located
+/
+Barack Obama is president of United State of America
+who
+barack
+obama
+president
+america
+usa
+united 
+states 
+america
+/
+who is head of computer science department
+who
+hod
+computer 
+science
+head
+department
+/
