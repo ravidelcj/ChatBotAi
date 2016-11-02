@@ -72,7 +72,7 @@ public class InputProcessor {
 		ArrayList<ArrayList<Integer> > finalList = new ArrayList<ArrayList<Integer>>();
 		for(int i = 0; i < inputTokens.size(); i++){
 			ArrayList<Integer> temp = trie.getList(inputTokens.get(i));
-			if(temp == null){
+			if(temp == null || temp.size() == 0){
 				continue;
 			}
 			finalList.add(temp);
