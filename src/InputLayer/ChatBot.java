@@ -38,7 +38,7 @@ public class ChatBot {
 		try{
     		File file = new File("./trie.ser");
     		if(file.delete()){
-    			System.out.println(file.getName() + " is deleted!");
+    			//System.out.println(file.getName() + " is deleted!");
     		}else{
     			System.out.println("Delete operation is failed.");
     		}
@@ -55,11 +55,11 @@ public class ChatBot {
 			fin = new FileInputStream("./previousdata.txt");
 			BufferedReader br = new BufferedReader(new InputStreamReader(fin, Charset.forName("UTF-8")));
 			while((ans = br.readLine()) != null){			
-				System.out.println(ans);
-				int index = answerDatabase.addAnswer(ans);
+				//System.out.println(ans);
+				int index = answerDatabase.addAnswer(ans.trim());
 				while(!(ans = br.readLine()).equals("/")){
-					trie.insert(ans, index);
-					System.out.println(ans);
+					trie.insert(ans.trim(), index);
+					//System.out.println(ans);
 				}	
 			}
 			br.close();
@@ -84,12 +84,12 @@ public class ChatBot {
 			BufferedReader br = new BufferedReader(new InputStreamReader(fin, Charset.forName("UTF-8")));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fout, Charset.forName("UTF-8")));
 			while((ans = br.readLine()) != null){			
-				System.out.println(ans);
+				//System.out.println(ans);
 				bw.append(ans + "\n");
 				int index = answerDatabase.addAnswer(ans);
 				while(!(ans = br.readLine()).equals("/")){
 					trie.insert(ans, index);
-					System.out.println(ans);
+					//System.out.println(ans);
 					bw.append(ans + "\n");
 				}	
 				bw.append("/\n");
@@ -145,6 +145,8 @@ public class ChatBot {
 			}else if(userResponse.equals("HardReset")){
 				chatbot.resetHard();
 				chatbot.serializeTrie();
+				botResponse="Hi There i am Chat Bot.\n Please feel free to ask me any query :)";
+				continue;
 			}else if(userResponse.equals("end")){
 				break;
 			}

@@ -17,7 +17,7 @@ public class Database {
 	public void init(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","admin");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/bot","root","root");
 			statement = con.createStatement();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -28,7 +28,7 @@ public class Database {
 	
 	public int addAnswer(String answer){
 		try {
-			statement.executeUpdate("Insert into answers(answer) values('" + answer + "')");
+			statement.executeUpdate("Insert into answers(answer) values ('" + answer + "')");
 			rs = statement.executeQuery("Select COUNT(*) from answers");
 			while(rs.next()){
 			 index = rs.getInt(1);

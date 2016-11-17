@@ -1,0 +1,218 @@
+Infosys Limited (formerly Infosys Technologies Limited) is an Indian multinational corporation that provides business consulting, information technology and outsourcing services. Infosys is the third-largest Indian IT services company by 2016 revenues, and the fifth largest employer of H-1B visa professionals in the United States in FY 2013
+what
+/
+On 15 January 2016, Infosys had 1,045 clients across 50 countries
+how
+many
+number
+clients
+client
+/
+In 2012, Infosys announced a new office in Milwaukee, Wisconsin to service Harley-Davidson
+when
+harley
+davidson
+/
+Infosys announced a new office in Milwaukee, Wisconsin to service Harley-Davidson
+where
+harley
+davidson
+/
+Infosys hired 1,200 United States employees in 2011 and 2000 more employees in 2012
+how
+many
+hired
+hiring
+hire
+/
+Infosys has more than 199,000 employees across the globe
+how
+many
+number
+employees
+employee
+/
+Infosys has its corporate headquarter in Banglore
+where
+headquarter
+headquartered
+/
+Infosys has its offices in Banglore, Thiruvananthapuram, Pune, Mysore, Mumbai, Mangalore, Jaipur, Hyderabad, Gurgaon, Chennai, Chandigarh, Bhubaneswar
+where
+what
+how
+many
+offices
+branches
+india
+/
+It provides software development, maintenance and independent validation services to companies in banking, finance, insurance, manufacturing and other domains
+what
+services
+do
+/
+Infosys created Finacle, Mana, Infosys Information Platform (IIP), EdgeVerve, Panaya, Skava etc
+what
+product
+products
+/
+Some of the major Infosys clients are IBM corporation,ICICI Bank, Daimler Mercedes-Benz, HSBC BANK, HP etc
+who
+clients
+/
+Finacle is a core banking product that provides universal banking functionality to banks. Finacle is used by banks across 84 countries that serve over 450 million customers
+what
+finacle
+do
+/
+EdgeVerve provides cloud-hosted business platform
+what
+edgeVerve
+do
+/
+Panaya provides ability to test and manage ERP changes that drive core business processes, faster and better at a fraction of the cost
+what
+panaya
+do
+/
+Skava is a new mobile first and E-commerce platform. It provides flexibility to build the right digital experience, for the right customer, at the right time across all devices
+what
+skava
+do
+/
+On 15 February 2015, its market capitalisation was Rs. 263,735 crores ($42.51 billion), making it Indias sixth largest publicly traded company
+what
+market
+capitalisation
+revenue
+/
+Infosys was co-founded in 1981 by 7 Engineers N. R. Narayana Murthy, Nandan Nilekani, N. S. Raghavan, S. Gopalakrishnan, S. D. Shibulal, K. Dinesh and Ashok Arora after they resigned from Patni Computer Systems
+founders
+co-founder
+cofounder
+co-founders
+cofounders
+founder
+co
+who
+founded
+when
+how
+name
+/
+Infosys signed its first client, Data Basics Corporation, in New York City
+where
+first
+client
+who
+/
+The Company changed its name to Infosys Technologies Private Limited in April 1992 and to Infosys Technologies Limited when it became a public limited company in June 1992. It was later renamed to Infosys Limited in June 2011
+name
+history
+naming
+change
+/
+In 1996, Infosys established the Infosys Foundation, to support the underprivileged sections of society. At the outset, the Infosys Foundation implemented many programs in Karnataka
+when
+why
+foundation
+established
+establish
+/
+A team at the Foundation identifies all the programs in the areas of Healthcare, Education, Culture, Destitute Care and Rural Development
+foundation
+what
+work
+/
+Infosys Global Academic Relations team forges Academic Entente (AcE) with academic and partner institutions. It explores co-creation opportunities between Infosys and academia through case studies, student trips and speaking engagements. They also collaborate on technology, emerging economies, globalization, and research. Some initiatives include research collaborations, publications, conferences and speaking sessions, campus visits and campus hiring
+academic
+relation
+relations
+entente
+ace
+what
+/
+Infosys Labs collaborates with leading national and international universities such as the University of Southern California Viterbi School of Engineering, University of Cambridge, Queens University of Belfast, University of Illinois at Urbana-Champaign, Indian Institute of Technology Bombay, IITB-Monash Research Academy, Indraprastha Institute of Information Technology, Delhi, Indian Institute of Science, Bangalore, Purdue University, Indian Institute of Information Technology, Bangalore
+collaboration
+collaborate
+collaborated
+national
+international
+university
+what
+how
+many
+name
+universities
+/
+The Infosys Prize is an annual award given to scientists, researchers, engineers and social scientists connected to India. It is given by the Infosys Science Foundation, a non-profit trust which was set up in February 2009 by Infosys and some members of its Board. The prize is given under six categories. Each category includes a gold medallion, a citation certificate, and prize money of Rs. 65 Lakh
+prize
+what
+/
+Infosys had acquired Australia-based IT service provider Expert Information Services for $23 million, Infosys BPO acquired Atlanta-based McCamish Systems for about $38 million, Infosys acquired Switzerland-based Lodestone Management Consultants for about $345 million, Infosys acquired Panaya, Inc., a leading provider of automation technology for large scale enterprise software management, Infosys acquired Skava, a leading provider of digital experience solutions, including mobile commerce and in-store shopping experiences to large retail clients. The acquisition of Skava is part of Infosys strategy to help clients bring new digital experiences to their customers through IP-led technology offerings, new automation tools and unparalleled skill and expertise in these new emerging areas
+how
+which
+many
+what
+acquired
+acquire
+/
+Vishal Sikka is the CEO and MD of Infosys
+who
+ceo
+md
+vishal
+sikka
+/
+Vishal Sikka receives $5.08 Million (30 Crores) and stock options worth $2 million as annual compensation
+what
+earning
+salary
+how
+much
+vishal
+ceo
+sikka
+earnings
+/
+Training centre of infosys is located in Mysuru
+where
+located
+training
+centre
+location
+/
+Established in 2002, it had trained around 125,000 engineering graduates by June 2015. It can train 14,000 employees at a given point of time on various technologies
+how 
+many
+trained
+trains
+train
+employees
+graduates
+what
+mysuru
+/
+As the largest corporate university of World, the Infosys global education centre in the 337 acre campus has 400 instructors and 200 classrooms, with international benchmarks at its core. Established in 2002, it had trained around 125,000 engineering graduates by June 2015. It can train 14,000 employees at a given point of time on various technologies. The Infosys Leadership Institute (ILI), based in Mysuru, has 96 rooms and trains about 400 Infoscians annually. In addition to above, Infosys Training Center in Mysuru also provides number of extra curricular facilities like Tennis,Badminton,Basketball,Swimming pool,Gym etc
+training
+centre
+campus
+mysuru
+what
+know
+/
+Graduates are trained for 6 months at Mysuru
+training
+time
+period
+what
+how
+/
+Infosys was ranked 15th largest IT services provider in the world by HfS Research in its 2013 ranking. Infosys was ranked 19th on the worlds most innovative companies list by Forbes. Infosys was in the list of top twenty green companies in Newsweek Green Rankings for 2012. The company has been voted most admired company of India in The Wall Street Journal Asia 200
+awards
+award
+name
+number
+how
+many
+/
